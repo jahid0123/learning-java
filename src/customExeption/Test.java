@@ -1,7 +1,5 @@
 package customExeption;
 
-public class Test {
-  package customExeption;
 
 public class Test {
 
