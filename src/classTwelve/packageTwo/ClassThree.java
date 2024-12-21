@@ -5,7 +5,7 @@ import classTwelve.packageOne.ClassOne;
 public class ClassThree extends ClassOne {
     public static void main(String[] args) {
 
-        super.b;
-        super.c;
+        //super.b;
+        //super.c;
     }
 }
