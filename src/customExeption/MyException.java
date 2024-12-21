@@ -1,10 +1,10 @@
 package customExeption;
 
-public class MyExeption extends Exception{
+public class MyException extends Exception{
 
 
-    public MyExeption(String string) {
+    public MyException(String string) {
 
-        super(string);
+       super(string);
     }
 }
