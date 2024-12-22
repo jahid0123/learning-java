@@ -1,6 +1,6 @@
 package classSeven;
 
-import eighthClass.SimpleCircleZakaria;
+import classEight.SimpleCircleZakaria;
 
 public class CallSimpleCircleZakaria {
     public static void main(String[] args) {
