@@ -10,8 +10,8 @@ public class WebCrawler {
 
         System.out.println("Enter a URL: ");
         String url = input.nextLine();
-        crawler(url);
 
+        crawler(url);
 
     }
 
@@ -22,7 +22,7 @@ public class WebCrawler {
 
         listOfPendingURLs.add(startingURL);
         while (!listOfPendingURLs.isEmpty() && listOfTraversedURLs.size()<=100){
-            String urlString = listOfPendingURLs.removeFirst();
+            String urlString = listOfPendingURLs.remove(0);
             if (!listOfTraversedURLs.contains(urlString)){
                 listOfTraversedURLs.add(urlString);
                 System.out.println("Craw "+ urlString);

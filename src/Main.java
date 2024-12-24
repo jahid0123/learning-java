@@ -9,28 +9,30 @@ public class Main {
             System.out.println("Under age");
         System.out.println("well come");*/
 
-  /*      int ch = -10;
+        int ch = -10;
         switch (ch){
             case 1: ch++;
                     break;
             case 2: ch++;
                     break;
+            default: ch++;
             case 3: ch++;
                     break;
             case 4: ch++;
-                    break;
-            default: ch++;
+
 
         }
 
 
-               System.out.println(ch);*/
+               System.out.println(ch);
 
-        for (int i=1; i<4; i++){
+/*        for (int i=1; i<4; i++){
             if (i<2) continue;
             System.out.println(i);
 
-        }
+      }
+*/
+
 
     }
 }
