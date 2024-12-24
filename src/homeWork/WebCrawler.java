@@ -10,8 +10,8 @@ public class WebCrawler {
 
         System.out.println("Enter a URL: ");
         String url = input.nextLine();
-
         crawler(url);
+
 
     }
 
