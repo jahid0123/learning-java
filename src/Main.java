@@ -1,12 +1,10 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
+import java.sql.SQLOutput;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Hello, World!");
+        //System.out.println("Hello, World!");
 
 
         /*int age = 16;
@@ -27,6 +25,16 @@ public class Main {
 
 
         }*/
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter any integer number to check even or odd: ");
+        int num = scanner.nextInt();
+
+        if (num%2==0){
+            System.out.println(num+" is Even number.");
+        }else {
+            System.out.println(num+" is Odd number");
+        }
 
 
     }
