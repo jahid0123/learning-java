@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -9,7 +14,7 @@ public class Main {
             System.out.println("Under age");
         System.out.println("well come");*/
 
-        int ch = -10;
+     /*   int ch = -10;
         switch (ch){
             case 1: ch++;
                     break;
@@ -21,18 +26,9 @@ public class Main {
             case 4: ch++;
 
 
-        }
-
-
-               System.out.println(ch);
-
-/*        for (int i=1; i<4; i++){
-            if (i<2) continue;
-            System.out.println(i);
-
-      }
-*/
+        }*/
 
 
     }
+
 }
