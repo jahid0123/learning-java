@@ -5,8 +5,6 @@ public class FindDuplicateValue {
 
         int[] list = {10, 70, 20, 30, 40, 50, 60, 80};
 
-       // FindCommonElements findCommonElements = new FindCommonElements();
-
         findDuplicates(list);
 
     }
