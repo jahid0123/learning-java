@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -33,6 +35,18 @@ public class Main {
         }*/
 
 
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        for (int i = 0; i<=num; i++){
+            if (i<=1){
+                System.out.print(i+ " ");
+                if (i==1){
+                    System.out.print(i+i+" ");
+                }
+            }else {
+                System.out.print((i-1)+(i-2)+" ");
+            }
+        }
 
 
     }
