@@ -7,6 +7,7 @@ public class Person {
     private int age;
     private String febColor;
     private String address;
+    private int ageI;
 
     public Person(){
 
