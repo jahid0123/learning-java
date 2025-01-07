@@ -35,7 +35,7 @@ public class Main {
         }*/
 
 
-       Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
         for (int i = 0; i<=num; i++){
             if (i<=1){
@@ -47,7 +47,6 @@ public class Main {
                 System.out.print((i-1)+(i-2)+" ");
             }
         }
-
 
 
     }
