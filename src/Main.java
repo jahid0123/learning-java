@@ -35,7 +35,7 @@ public class Main {
         }*/
 
 
-        Scanner scanner = new Scanner(System.in);
+    /*    Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
         for (int i = 0; i<=num; i++){
             if (i<=1){
@@ -46,7 +46,33 @@ public class Main {
             }else {
                 System.out.print((i-1)+(i-2)+" ");
             }
+        }*/
+
+        int n = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your number: ");
+        int m = sc.nextInt();
+
+        if (m <=1 ) {
+            System.out.printf(m + " , is not prine number.");
+        }else {
+            for (int i = 2; i < m; i++) {
+                if (m % i == 0) {
+                    n++;
+                }
+            }
+
+            if  (n == 0) {
+                System.out.printf(m + " , is prine number.");
+
+            } else {
+                System.out.println(m + " , is not prime number.");
+
+            }
         }
+        
+        sc.close();
+
 
 
     }

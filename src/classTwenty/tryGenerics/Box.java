@@ -13,9 +13,9 @@ public class Box<T> {
 
     public static void main(String[] args) {
         System.out.println("Hello world");
-        Box<Integer> integerBox = new Box<>();
+       // Box<Integer> integerBox = new Box<>();
 
-        Box<String> stringBox = new Box<>();
+        //Box<String> stringBox = new Box<>();
     }
 }
 
