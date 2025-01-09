@@ -4,11 +4,11 @@ import java.time.LocalDate;
 
 public class Task {
 
-    public enum Status{
+   /* public enum Status{
         Pending,
         In_Progress,
         Completed
-    }
+    }*/
 
     private int id;
     private String title;
@@ -81,7 +81,7 @@ public class Task {
         System.out.println(task);
         System.out.println();
 
-        task.setStatus(Status.In_Progress);
+        task.setStatus(Status.Completed);
         System.out.println("Updated task: "+task.toString());
     }
 }
