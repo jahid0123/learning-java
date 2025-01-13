@@ -1,31 +1,41 @@
 package bankAccountManagementSystem;
 
-public class SavingsAccount extends BankAccount{
+public class SavingsAccount extends BankAccount {
 
-    private final String ACCOUNT_TYPE = "Savings";
+    private final double interestRate;
 
-    public SavingsAccount(int accountNumber, String accHolderName, double balance,  double interest) {
-        super(accountNumber, balance, accHolderName, interest);
+    public SavingsAccount(int accountNumber, double accountBalance ,double interestRate){
+        super(accountNumber, accountBalance);
+        this.interestRate = interestRate;
     }
 
     @Override
     public void deposit(double amount) throws InvalidAmountException {
-
-        if (amount<=0)
-            throw new InvalidAmountException("Deposit amount must greater then 0");
-        else
-            setBalance(getBalance()+amount);
-
+        if (amount<=0){
+            throw new InvalidAmountException("Deposit amount must be grater then 0");
+        }else{
+          setAccountBalance(getAccountBalance()+amount);
+        }
     }
 
     @Override
-    public void withdraw(double amount) throws InsufficientFundsException {
-
-        if (getBalance()>=amount)
-            setBalance(getBalance()-amount);
-        else
+    public void withdrawal(double amount) throws InsufficientFundsException {
+        if (amount>getAccountBalance()){
             throw new InsufficientFundsException("Insufficient balance");
+        }else {
+            setAccountBalance(getAccountBalance() - amount);
+        }
     }
 
+    @Override
+    public double interestAmount() {
+        return getAccountBalance()*interestRate/100;
+    }
 
+    @Override
+    public String toString() {
+        return "Account Number: "+getAccountNumber()+
+                "\nAccount Balance: "+getAccountBalance()
+                +"\ninterestRate=" + interestRate;
+    }
 }

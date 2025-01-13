@@ -1,47 +1,36 @@
 package bankAccountManagementSystem;
 
 public abstract class BankAccount {
+
     private int accountNumber;
-    private double balance;
+    private double accountBalance;
 
 
+    public BankAccount (int accountNumber, double accountBalance){
 
-    private double interest;
-
-    public BankAccount(int accountNumber, double balance, double interest) {
         this.accountNumber = accountNumber;
-        this.balance = balance;
-        this.interest = interest;
+        this.accountBalance = accountBalance;
     }
 
-    public int getAccountNumber() {
+    public void setAccountNumber(int accountNumber){
+        this.accountNumber = accountNumber;
+    }
+
+    public int getAccountNumber(){
         return accountNumber;
     }
 
-    public void setAccountNumber(int accountNumber) {
-        this.accountNumber = accountNumber;
+    public void setAccountBalance(double accountBalance){
+        this.accountBalance = accountBalance;
     }
 
-    public double getBalance() {
-        return balance;
-    }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
-
-    public double getInterest() {
-        return interest*balance;
-    }
-
-    public void setInterest(double interest) {
-        this.interest = interest;
+    public double getAccountBalance(){
+        return accountBalance;
     }
 
     public abstract void deposit(double amount) throws InvalidAmountException;
 
-    public abstract void withdraw(double amount) throws InsufficientFundsException;
+    public abstract void withdrawal(double amount) throws InsufficientFundsException;
 
-
-
+    public abstract double interestAmount();
 }

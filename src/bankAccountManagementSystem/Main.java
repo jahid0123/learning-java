@@ -1,49 +1,43 @@
 package bankAccountManagementSystem;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 public class Main {
 
-    public static List<BankAccount> readAccounts (String filePath) throws IOException {
+    public static void main(String[] args) {
 
         List<BankAccount> accounts = new ArrayList<>();
 
-        try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath));
-            String line;
-            while ((line = bufferedReader.readLine()) !=null){
-                String[] details = line.split(",");
-                int accountNumber = Integer.parseInt(details[0].trim());
-
-                String accountType = details[1].trim();
-                double balance =Double.parseDouble(details[2].trim());
-                double interest = Double.parseDouble(details[3].trim());
+        try(Scanner sc = new Scanner(new File("C:\\GIT\\learning-java\\Account.cvs"))) {
+            while (sc.hasNextLine()){
+                String[] data = sc.nextLine().split(",");
+                int accountNumber = Integer.parseInt(data[0]);
+                String accountType = data[1];
+                double accountBalance = Double.parseDouble(data[2]);
+                double interestRate = Double.parseDouble(data[3]);
 
                 if (accountType.equalsIgnoreCase("Savings")){
-                    accounts.add(new SavingsAccount(accountNumber, accountType ,balance, interest));
+                    accounts.add(new SavingsAccount(accountNumber, accountBalance, interestRate));
+                } else if(accountType.equalsIgnoreCase("Current")){
+                    accounts.add(new CurrentAccount(accountNumber, accountBalance, interestRate));
                 }
             }
-
-        }catch (IOException ignored){
-
+        }catch (FileNotFoundException e){
+            System.out.println(e.getMessage());
         }
 
-        return accounts;
-    }
-
-    public static void main(String[] args) {
-
-
-
-       try {
-           String inputFilePath = "C:\\GIT\\learning-java\\Account.cvs";
-           String outputFilePath = "C:\\GIT\\learning-java\\Accounts_update";
-
-           List<BankAccount> accounts = new ArrayList<>()
-       }
+        try (PrintWriter writer= new PrintWriter("C:\\GIT\\learning-java\\accounts_update.csv")){
+             for (BankAccount account: accounts) {
+                 account.deposit(500);
+                 writer.println(account);
+            }
+        }catch (FileNotFoundException | InvalidAmountException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
