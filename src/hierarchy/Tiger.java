@@ -1,4 +1,4 @@
-package Hiyererkey;
+package hierarchy;
 
 public class Tiger extends Cat{
 }

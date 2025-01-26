@@ -1,4 +1,4 @@
-package Hiyererkey;
+package hierarchy;
 
 public class Dog extends Mammal{
 }

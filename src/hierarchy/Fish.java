@@ -1,4 +1,4 @@
-package Hiyererkey;
+package hierarchy;
 
 public class Fish extends Animal{
 }
