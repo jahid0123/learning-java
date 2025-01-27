@@ -8,5 +8,12 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sax-2.0.1" level="project" />
+    <orderEntry type="library" name="kotlin-stdlib-2.1.20-Beta1 (1)" level="project" />
+    <orderEntry type="library" name="okhttp-5.0.0-alpha.14" level="project" />
+    <orderEntry type="library" name="okio-3.10.2" level="project" />
+    <orderEntry type="library" name="okio-3.10.3" level="project" />
+    <orderEntry type="library" name="okio-3.10.4" level="project" />
+    <orderEntry type="library" name="okio-jvm-3.9.0" level="project" />
+    <orderEntry type="library" name="kotlin-stdlib-1.9.23" level="project" />
   </component>
 </module>
